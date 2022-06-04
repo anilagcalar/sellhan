@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/css/sellhan.css}" type="text/css" rel="stylesheet"/>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<thead>
+		<tr style="font-weight: bold;" bgcolor="lightgreen">
+			<td>ID</td>
+				<td>First Name </td>
+					<td>Last Name</td>
+						<td>Email</td>
+							<td>Password</td>
+		
+		</tr>
+		</thead>
+	<th:block th:each="admin:${admins}">
+		<tr>		
+		<td th:text="${admin.id}"/>
+		<td th:text="${admin.firstName}"/>
+		<td th:text="${admin.lastName}"/>
+		<td th:text="${admin.email}"/>
+		<td th:text="${admin.password}"/>
+		
+		</tr>
+	</th:block>
+	
+	</table>
+</body>
+</html>
